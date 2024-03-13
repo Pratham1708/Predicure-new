@@ -13,7 +13,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<style>
+    .gallery{
+        display: flex;
+        gap: 1rem;
+        max-width: 80rem;
+    }
+    .card{
+        position: relative;
+        left: 0;
+        width: 6rem;
+        border-radius: 1.2rem;
+        height: 20rem;
+        overflow: hidden;
+        background-color: var(--background);
+        transition: 0.4s ease-in-out;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+        flex: 0.25;
+    }
+    .card img{
+        position: relative;
+        height: 20rem;
+        object-fit: cover;
+    }
+    .card:hover{
+        flex: 2;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    /*polish images center*/
+    .card:nth-child(1) img {
+        left: -8rem;
+    }
+    .card:nth-child(2) img {
+        left: -6rem;
+    }
+    .card:nth-child(3) img {
+        left: -14rem;
+    }
+    .card:nth-child(4) img {
+        left: -8rem;
+    }
+</style>
 <!-- STYLESHEET -->
 <link rel="stylesheet" href="./css/obesity.css">
 <body>
@@ -41,28 +83,28 @@
       <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <div class="numbertext"></div>
-          <img src="woman-white-tshirt-holds-yellow-centimeter-tape-her-hands-min.png" class="img" style="width:100%">
-          <div class="text"></div>
+        <div class="gallery">
+          <figure class="card">
+          <img src="woman-white-tshirt-holds-yellow-centimeter-tape-her-hands-min.png">
+          </figure>
         </div>
       
-        <div class="mySlides fade">
-          <div class="numbertext"></div>
-          <img src="young-sports-man-hiding-face-weight-scales-min.png" class="img" style="width:100%">
-          <div class="text"></div>
+        <div class="gallery">
+          <figure class="card">
+          <img src="young-sports-man-hiding-face-weight-scales-min.png">
+          </figure>
         </div>
       
-        <div class="mySlides fade">
-          <div class="numbertext"></div>
-          <img src="65Z_2112.w012.n001.20A.p20.20-min.png" class="img" style="width:100%">
-          <div class="text"></div>
+        <div class="gallery">
+          <figure class="card">
+          <img src="65Z_2112.w012.n001.20A.p20.20-min.png">
+          </figure>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext"></div>
-            <img src="overweight-man-shrt-is-small-him-with-huge-belly-open-buttons-min.png" class="img" style="width:100%">
-            <div class="text"></div>
+        <div class="gallery">
+            <figure class="card">
+            <img src="overweight-man-shrt-is-small-him-with-huge-belly-open-buttons-min.png">
+            </figure>
           </div>
 
         <!-- Next and previous buttons -->
