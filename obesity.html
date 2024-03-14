@@ -9,16 +9,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
   <style>
-    .from {
+    :root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-varient: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      color: var(--color-white);
+      background-color: #1f2641;
+    }
+
+    .container {
+      background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 50px;
-      margin-top: 90px;
+      padding: 30px;
+      margin-top: 30px;
+      width: 100vw;
+      position: relative;
+      margin-left: 189px;
     }
 
     h1 {
       color: #007bff;
-      text-align:center;
     }
 
     .form-group label {
@@ -39,23 +62,81 @@
       background-color: #0056b3;
       border-color: #0056b3;
     }
+    nav {
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+  }
+  
+  .nav__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    background-color:#1f2641;
+    margin-left: 189px;
+    position: absolute;
+  }
+  .nav__container h4{
+    align-items:flex-start;
+    margin-left:0px;
+  }
+  nav button {
+   display: none;   /* Don't want to display button where width is more than 1024px */
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    gap:4rem;
+  }
+  
+  .nav__menu a {
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+  
+  .nav__menu a:hover {
+    color: var(--color-bg2);
+  }
+  
+  /* Change Navbar Style on Scroll using JavaScript */
+  .window-scroll {
+    background: #6c63ff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+  .window-scroll .nav__container h4 {
+    background: #6c63ff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  .xyz{
+    transition: transform 0.1s linear;
+  }
+  .xyz:hover{
+      transform: scale(1.02);
+  }
   </style>
-  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
   <nav>
     <div class="container nav__container" style="justify-content: space-evenly;">
-      <a href="index.html">
-        <img src="logo.PNG" style="background-size: contain; width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+      <a href="#home">
+        <img src="img\logo.PNG" style="background-size: contain; height: 70px; width: 70px;">
       </a>
-      <a href="index.html"><h4>PrediCure</h4></a>
+      <a href="#home"><h4>PrediCure</h4></a>
       <ul class="nav__menu">
         <li><input type="text" id="search-box" placeholder="Search"></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="obesity.html">Obesity</a></li>
-        <li><a href="diabetes.html">Diabetes</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#container">About</a></li>
+        <li><a href="#obe">Obesity</a></li>
+        <li><a href="#dia">Diabetes</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -63,9 +144,7 @@
       <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
     </div>
   </nav>
-  <!-- =============================== END OF NAVBAR ============================================================== -->
-
-  <div class="from">
+  <div class="container">
     <h1 class="mt-4">Obesity Dataset</h1>
     <form id="obesityForm">
       <div class="form-group">
@@ -174,89 +253,17 @@
         <input type="submit" class="btn btn-primary" value="Submit">
       </div>
     </form>
-    <!--<footer>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="predicure.html" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="predicure.html">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="diabetes.html">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="diabetes.html" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </footer> -->
-  </div>
-  <footer>
-  <div class="container footer__container">
-    <div class="footer__1">
-      <a href="index.html" class="footer_logo"><h4>PrediCure</h4></a>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab veniam eaque accusamus officiis quo dolore, dolores tenetur, corporis facere modi.</p>
     </div>
-
-    <div class="footer__2">
-       <h4>Links</h4>  <!-- == permalinks -->
-      <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="obesity.html">Obesity</a></li>
-        <li><a href="diabetes.html">Diabetes</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__3">
-      <h4>Privacy</h4>
-      <ul class="privacy">
-        <li><a href="">Privacy Policy</a></li>
-        <li><a href="">Terms and Conditions</a></li>
-        <li><a href="">Refund Policy</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__4">
-      <h4>Contact</h4>
-      <div>
-        <p>+91 2541657854</p>
-        <p>ra@gmail.com</p>
-      </div>
-
-      <ul class="footer__socials">
-        <li>
-          <a href=""><i class="uil uil-facebook"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="uil uil-instagram"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="uil uil-twitter"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="uil uil-linkedin"></i></a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-  <p>All right Reserved &#169; PrediCure,2024</p>
-</footer>
-
-<!-- ==========================================  END of FOOTER =================================== -->
-
 
   <!-- Bootstrap JS and jQuery -->
-  <script src="./main.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    window.addEventListener ("scroll", () => {
+  document.querySelector("nav").classList.toggle('window-scroll', window.scrollY>0)
+});
+  </script>
 </body>
 
 </html>
